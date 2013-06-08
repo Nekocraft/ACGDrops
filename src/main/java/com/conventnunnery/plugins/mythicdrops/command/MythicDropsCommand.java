@@ -727,36 +727,34 @@ public class MythicDropsCommand implements CommandExecutor {
 
     private void showHelp(CommandSender sender) {
         sender.sendMessage(ChatColor.DARK_PURPLE
-                + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        sender.sendMessage(ChatColor.BLUE + "MythicDrops v"
-                + getPlugin().getDescription().getVersion() + " Help");
-        sender.sendMessage(ChatColor.BLUE + "Coded by ToppleTheNun");
+                + "===============================");
+        sender.sendMessage(ChatColor.BLUE + "神秘物品 v"
+                + getPlugin().getDescription().getVersion() + " 帮助");
+        sender.sendMessage(ChatColor.BLUE + "作者 ToppleTheNun");
         getPlugin().getLanguageManager().sendMessage(sender, "command.command-help",
-                new String[][]{{"%command%", "md"}, {"%help%", "Shows plugin help"}});
+                new String[][]{{"%command%", "md"}, {"%help%", "显示帮助"}});
         if (sender.hasPermission("mythicdrops.command.spawn")) {
             getPlugin().getLanguageManager().sendMessage(sender, "command.command-help",
-                    new String[][]{{"%command%", "md spawn [tier|gem|tome|*] [amount] [minimum] [maximum]"}, {"%help%",
-                            "Gives the sender [amount] MythicDrops of [tier] " +
-                                    "with durability percentage between [minimum] and [maximum]."}});
+                    new String[][]{{"%command%", "md spawn [tier|gem|tome|*] [数量] [最小] [最大]"}, {"%help%",
+                            "生成 [数量] 神秘物品 [tier] " +
+                                    "耐久介于 [最小] 和 [最大] 之间."}});
         }
         if (sender.hasPermission("mythicdrops.command.custom")) {
             getPlugin().getLanguageManager().sendMessage(sender, "command.command-help",
-                    new String[][]{{"%command%", "md custom [player|self] [name] [amount]"}, {"%help%",
-                            "Gives the [player|sender] an [amount] of custom items with name [name]."}});
+                    new String[][]{{"%command%", "md custom [玩家|自己] [名字] [数量]"}, {"%help%",
+                            "给予 [玩家|自己] [数量] 个自定义物品使用名字 [名字]."}});
         }
         if (sender.hasPermission("mythicdrops.command.give")) {
             getPlugin().getLanguageManager().sendMessage(sender, "command.command-help",
-                    new String[][]{{"%command%", "md give <player> [tier|gem|tome|*] [amount] [minimum] [maximum]"},
+                    new String[][]{{"%command%", "md give <player> [tier|gem|tome|*] [数量] [最小] [最大]"},
                             {"%help%",
-                                    "Gives the <player> [amount] mythicdrops of [tier] " +
-                                            "with durability percentage between [minimum] and [maximum]."}});
+                                    "给予 <player> [数量] 神秘物品 [tier] " +
+                                            "耐久介于 [最小] 和 [最大] 之间."}});
         }
         if (sender.hasPermission("mythicdrops.command.reload")) {
             getPlugin().getLanguageManager().sendMessage(sender, "command.command-help",
                     new String[][]{{"%command%", "md reload"}, {"%help%",
-                            "Reloads the plugin's configuration files."}});
+                            "重新载入插件的配置文件."}});
         }
-        sender.sendMessage(ChatColor.DARK_PURPLE
-                + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
     }
 }
