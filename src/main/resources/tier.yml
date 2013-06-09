@@ -46,7 +46,7 @@
 # chanceToBeIdentified is the chance for an unidentified item
 #     to be part of this tier
 common:
-  displayName: Common
+  displayName: 普通
   displayColor: WHITE
   identifierColor: DARK_RED
   enchantments:
@@ -85,7 +85,7 @@ common:
     disallowedItemIds:
     - 298
 uncommon:
-  displayName: Uncommon
+  displayName: 不凡
   displayColor: BLUE
   identifierColor: DARK_RED
   enchantments:
@@ -126,7 +126,7 @@ uncommon:
     - diamond
     - iron
 rare:
-  displayName: Rare
+  displayName: 罕见
   displayColor: LIGHT_PURPLE
   identifierColor: DARK_RED
   enchantments:
@@ -168,7 +168,7 @@ rare:
     disallowedGroups:
     - diamond
 artisan:
-  displayName: Artisan
+  displayName: 工匠
   displayColor: AQUA
   identifierColor: DARK_RED
   enchantments:
@@ -198,7 +198,7 @@ artisan:
     disallowedGroups:
     - leather
 epic:
-  displayName: Rare
+  displayName: 传说
   displayColor: GREEN
   identifierColor: DARK_RED
   enchantments:
@@ -241,7 +241,7 @@ epic:
     disallowedGroups:
     - diamond
 exotic:
-  displayName: Exotic
+  displayName: 诡异
   displayColor: RED
   identifierColor: DARK_RED
   enchantments:
@@ -286,7 +286,7 @@ exotic:
     - chestplate
     - leggings
 legendary:
-  displayName: Legendary
+  displayName: 传奇
   displayColor: GOLD
   identifierColor: DARK_RED
   enchantments:

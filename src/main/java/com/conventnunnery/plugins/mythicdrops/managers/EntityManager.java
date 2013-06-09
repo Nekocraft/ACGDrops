@@ -52,13 +52,13 @@ public class EntityManager {
             return;
         }
         itemstack = cewise.getItemStack();
-        if (itemstack.getType().name().toUpperCase().contains("BOOTS")) {
+        if (itemstack.getType().name().toUpperCase().contains("靴子")) {
             cewise.getEntity().getEquipment().setBoots(itemstack);
-        } else if (itemstack.getType().name().toUpperCase().contains("LEGGINGS")) {
+        } else if (itemstack.getType().name().toUpperCase().contains("绑腿")) {
             cewise.getEntity().getEquipment().setLeggings(itemstack);
-        } else if (itemstack.getType().name().toUpperCase().contains("CHESTPLATE")) {
+        } else if (itemstack.getType().name().toUpperCase().contains("铠甲")) {
             cewise.getEntity().getEquipment().setChestplate(itemstack);
-        } else if (itemstack.getType().name().toUpperCase().contains("HELMET")) {
+        } else if (itemstack.getType().name().toUpperCase().contains("头盔")) {
             cewise.getEntity().getEquipment().setHelmet(itemstack);
         } else {
             cewise.getEntity().getEquipment().setItemInHand(itemstack);
@@ -81,13 +81,13 @@ public class EntityManager {
             return;
         }
         itemstack = cewise.getItemStack();
-        if (itemstack.getType().name().toUpperCase().contains("BOOTS")) {
+        if (itemstack.getType().name().toUpperCase().contains("靴子")) {
             cewise.getEntity().getEquipment().setBoots(itemstack);
-        } else if (itemstack.getType().name().toUpperCase().contains("LEGGINGS")) {
+        } else if (itemstack.getType().name().toUpperCase().contains("绑腿")) {
             cewise.getEntity().getEquipment().setLeggings(itemstack);
-        } else if (itemstack.getType().name().toUpperCase().contains("CHESTPLATE")) {
+        } else if (itemstack.getType().name().toUpperCase().contains("铠甲")) {
             cewise.getEntity().getEquipment().setChestplate(itemstack);
-        } else if (itemstack.getType().name().toUpperCase().contains("HELMET")) {
+        } else if (itemstack.getType().name().toUpperCase().contains("头盔")) {
             cewise.getEntity().getEquipment().setHelmet(itemstack);
         } else {
             cewise.getEntity().getEquipment().setItemInHand(itemstack);

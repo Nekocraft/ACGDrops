@@ -19,7 +19,7 @@
 #     Available options: SELF, OTHER, NONE
 #   Available effects found at the link below:
 #   http://jd.bukkit.org/dev/apidocs/org/bukkit/potion/PotionEffect.html
-Juggernaut:
+剑圣的:
   type: ARMOR
   enchantments:
     PROTECTION_ENVIRONMENTAL: 2
@@ -28,11 +28,10 @@ Juggernaut:
     PROTECTION_FIRE: 2
     PROTECTION_PROJECTILE: 2
   chance: 0.25
-  prefix: Juggernaut
+  prefix: 剑圣的
   lore:
-  - '&4Enchanted armor that protects'
-  - '&4the wearer from almost everything.'
-Defense I:
+  - '&4魔法铠甲，保护穿着者'
+防御 I:
   type: ARMOR
   effects:
     DAMAGE_RESISTANCE:
@@ -41,8 +40,8 @@ Defense I:
       target: SELF
   chance: 0.25
   lore:
-  - '&4Increases defense for 1.0s'
-Steadfast:
+  - '&4在一秒内增加防御值'
+坚定的:
   type: TOOL
   effects:
     SLOW:
@@ -54,11 +53,10 @@ Steadfast:
       duration: 3000
       target: SELF
   chance: 0.25
-  prefix: Sturdy
+  prefix: 坚固的
   lore:
-  - '&4Slows and increases damage'
-  - '&4of wielder for 3.0s'
-Berzerker:
+  - '&4在 3 秒内减缓和提高伤害'
+狂战士:
   type: ANY
   effects:
     DAMAGE_RESISTANCE:
@@ -70,16 +68,14 @@ Berzerker:
       duration: 1000
       target: SELF
   chance: 0.25
-  suffix: of Berzerking
+  suffix: 狂战士
   lore:
-  - '&4Increases damage resistance'
-  - '&4and output for 1.0s'
-Never Hungry:
+  - '&4在 1 秒内提高伤害输出'
+不再饥饿:
   type: ANY
-  suffix: of Satiation
+  suffix: 吃货
   lore:
-  - '&4The wielder/wearer never'
-  - '&4feels hungry after combat'
+  - '&4穿着者永远不会感觉到饿了'
   commands:
   - feed %SELF%
 version: 1.3
