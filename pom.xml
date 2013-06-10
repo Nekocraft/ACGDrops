@@ -4,18 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.conventnunnery</groupId>
-    <artifactId>MythicDrops</artifactId>
+    <artifactId>ACGDrops</artifactId>
     <version>1.1.2-SNAPSHOT</version>
-    <name>MythicDrops</name>
+    <name>ACGDrops</name>
     <description>Allows the creation, equipping, and dropping of magic items in Bukkit.</description>
     <url>https://dev.bukkit.org/server-mods/mythic/</url>
 
-    <scm>
-        <connection>scm:git:https://github.com/Nunnery/MythicDrops.git</connection>
-        <developerConnection>scm:git:https://github.com/Nunnery/MythicDrops.git</developerConnection>
-        <tag>HEAD</tag>
-        <url>https://github.com/Nunnery/MythicDrops</url>
-    </scm>
     <licenses>
         <license>
             <name>MIT License</name>
@@ -42,10 +36,10 @@
     </developers>
     <ciManagement>
         <system>Jenkins</system>
-        <url>https://topplethenun.ci.cloudbees.com/job/MythicDrops/</url>
+        <url>http://ci.nekocraft.com/job/ACGDrops/</url>
     </ciManagement>
     <build>
-        <finalName>${project.build.name}-${project.build.version}</finalName>
+        <finalName>${project.name}</finalName>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <resources>
             <resource>
@@ -113,65 +107,6 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
-                <executions>
-                    <execution>
-                        <id>sources</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9</version>
-                <executions>
-                    <execution>
-                        <id>javadoc-jar</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.0.1</version>
-                <executions>
-                    <execution>
-                        <id>make-report</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>pmd</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>2.5.2</version>
-                <executions>
-                    <execution>
-                        <id>make-report</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>findbugs</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>2.0</version>
                 <executions>
@@ -235,37 +170,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <distributionManagement>
-        <snapshotRepository>
-            <uniqueVersion>true</uniqueVersion>
-            <id>MythicDropsSnap</id>
-            <name>MythicDrops Snapshots</name>
-            <url>http://repository-topplethenun.forge.cloudbees.com/snapshot/</url>
-            <layout>default</layout>
-        </snapshotRepository>
-    </distributionManagement>
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.6</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9</version>
-                <configuration>
-                    <show>public</show>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jxr-plugin</artifactId>
-                <version>2.3</version>
-            </plugin>
-        </plugins>
-    </reporting>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.number>UNKNOWN</project.build.number>

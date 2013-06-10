@@ -22,29 +22,22 @@ options:
   customDropChance: 0.05
   autoUpdate: false
   debugOnStartup: false
-# spawnEgg prevents mobs spawned from spawn eggs
-#   from being equipped with drops if true
-# spawner prevents mobs spawned from a monster
-#   spawner from being equipped with drops if true
-# custom prevents mobs spawned from command or plugins
-#   from being equipped with drops if true
+# spawnEgg 禁止刷怪蛋怪物掉落物品
+# spawner 禁止刷怪箱怪物掉落物品
+# custom 禁止指令或插件生成的怪物掉落物品
 spawnPrevention:
   spawnEgg: true
   spawner: true
   custom: true
-# itemNameFormat determines the format of the items'
+# itemNameFormat 确定物品的格式
 #   names
-# preventMultipleChangesFromSockets determines if
-#   sockets can add a prefix to an already prefixed
-#   item (same goes for suffixes as well)
+# preventMultipleChangesFromSockets 确定是否能从镶嵌物获取多个前缀或后缀
 display:
   itemNameFormat: '%tiername%%itemtype%'
   preventMultipleChangesFromSockets: true
-# randomLoreEnabled determines if items can spawn with
-#   random lore from the lore.txt
-# randomLoreChance determines the chance of an item
-#   to spawn with random lore if randomLoreEnabled is true
-# format determines the format of the lore of the item
+# randomLoreEnabled 定义物品是否能从 lore.txt 中获取说明
+# randomLoreChance 定义获取说明的几率如果 randomLoreEnabled 是 true
+# 定义说明的格式
   tooltips:
     randomLoreEnabled: false
     randomLoreChance: 0.25
@@ -55,12 +48,9 @@ display:
 #   for mobs to spawn with an item.
 percentages:
   mobSpawnWithItemChance: 0.25
-# socketGemsEnabled determines whether or not Socket Gems
-#   will spawn in game
-# socketGemsChance is the chance for Socket Gems to actually
-#   spawn in game
-# socketGemMaterialIDs is a list of allowed item ids for
-#   Socket Gems
+# socketGemsEnabled 定义是否在游戏中生成镶嵌宝石
+# socketGemsChance 定义生成镶嵌宝石的几率
+# socketGemMaterialIDs 定义镶嵌宝石的原材料列表
 # sockettedItemsEnabled determines whether or not items
 #   can spawn with sockets
 # spawnWithSocketChance is the chance for items to spawn
