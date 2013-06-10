@@ -96,12 +96,7 @@ public class NameManager {
         if (itemType == null) {
             return null;
         }
-        String mythicMatName = getPlugin().getConfigurationManager()
-                .getConfiguration(MythicConfigurationFile.LANGUAGE)
-                .getString(itemType.toLowerCase());
-        if (mythicMatName == null) {
-            mythicMatName = itemType;
-        }
+        String mythicMatName = getPlugin().getLanguageManager().getMessage("displayNames." + itemType.toLowerCase());
         return StringUtils.getInitCappedString(mythicMatName.split(" "));
     }
 
@@ -139,11 +134,9 @@ public class NameManager {
             }
         }
         if (enchantment == null) {
-            return getPlugin().getConfigurationManager()
-                    .getConfiguration(MythicConfigurationFile.LANGUAGE).getString("Ordinary");
+            return getPlugin().getLanguageManager().getMessage("Ordinary");
         }
-        String ench = getPlugin().getConfigurationManager()
-                .getConfiguration(MythicConfigurationFile.LANGUAGE).getString(enchantment.getName());
+        String ench = getPlugin().getLanguageManager().getMessage(enchantment.getName());
         if (ench != null) {
             return ench;
         }
@@ -165,12 +158,9 @@ public class NameManager {
         } else {
             comb2 = comb;
         }
-        String mythicMatName = getPlugin().getConfigurationManager()
-                .getConfiguration(MythicConfigurationFile.LANGUAGE).getString(comb.toLowerCase());
+        String mythicMatName = getPlugin().getLanguageManager().getMessage("displayNames." + comb.toLowerCase());
         if (mythicMatName == null) {
-            mythicMatName = getPlugin().getConfigurationManager()
-                    .getConfiguration(MythicConfigurationFile.LANGUAGE)
-                    .getString(comb2.toLowerCase());
+            mythicMatName = getPlugin().getLanguageManager().getMessage(comb2.toLowerCase());
             if (mythicMatName == null) {
                 mythicMatName = getMinecraftMaterialName(matData.getItemType());
             }
@@ -277,12 +267,12 @@ public class NameManager {
      */
     public String randomFormattedName(ItemStack itemStack, Tier tier) {
         if (itemStack == null || tier == null) {
-            return "Mythic Item";
+            return "神秘物品";
         }
         String format = getPlugin().getPluginSettings()
                 .getDisplayItemNameFormat();
         if (format == null) {
-            return "Mythic Item";
+            return "神秘物品";
         }
         String minecraftName = getMinecraftMaterialName(itemStack.getData()
                 .getItemType());
