@@ -160,7 +160,7 @@ public class NameManager {
         }
         String mythicMatName = getPlugin().getLanguageManager().getMessage("displayNames." + comb.toLowerCase());
         if (mythicMatName == null) {
-            mythicMatName = getPlugin().getLanguageManager().getMessage(comb2.toLowerCase());
+            mythicMatName = getPlugin().getLanguageManager().getMessage("displayNames." + comb2.toLowerCase());
             if (mythicMatName == null) {
                 mythicMatName = getMinecraftMaterialName(matData.getItemType());
             }
